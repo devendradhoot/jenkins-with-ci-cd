@@ -6,7 +6,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git url:'https://github.com/devendradhoot/playjenkins.git', branch:'master'
+        git url:'https://github.com/devendradhoot/jenkins-with-ci-cd.git', branch:'master'
       }
     }
 
