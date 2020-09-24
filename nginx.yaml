@@ -23,15 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: web
-  name: mynginx
+  name: public-svc
 spec:
+  type: LoadBalancer
   ports:
-  - nodePort: 32223
-    port: 80
-    protocol: TCP
-    targetPort: 80
+  - port: 80
   selector:
-    app: web
-  type: NodePort
+    app: public-app
